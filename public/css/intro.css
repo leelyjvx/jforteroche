@@ -1,0 +1,65 @@
+body {
+	background-color: rgba(32,10,62,1);
+	size: auto;
+}
+
+.navbar {
+	background-color: rgba(32,10,62,1);
+	width: auto;
+	height: 50px;
+	overflow: hidden;
+	font-family: 'Tahoma';
+}
+
+.navbar, a {
+	color: yellow;
+}
+
+.navbar, a:hover {
+	color: rgba(200, 214, 229,0.5);
+}
+
+.box2 {
+	padding-top: 5px;
+	padding-bottom: 1px;
+}
+
+video {
+	size: 1876px;
+	position: absolute;
+}
+
+h1 {
+	z-index: 1;
+	position: relative;
+	padding-top: 250px;
+	margin-left: 315px;
+	color: white;
+}
+
+p {
+	z-index: 2;
+	position: relative;
+	margin-left: 450px;
+	color: white;
+}
+
+button {
+	z-index: 3;
+	position: relative;
+	margin-left: 500px;
+}
+
+h2 {
+	font-family: 'Tangerine';
+	color: yellow;
+}
+
+
+#intro {
+	z-index: 4;
+	position: relative;
+	background-color: rgba(131, 149, 167,0.3);
+	padding-bottom: 276px;
+	margin-right: 10px;
+}

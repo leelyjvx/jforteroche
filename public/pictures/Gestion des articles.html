@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://localhost/roman/view/posts_edit.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title> Gestion des articles </title>
+</head>
+<body>
+
+	<h2> Ecrire une nouvelle page </h2>
+
+	<form action="http://localhost/roman/controller/controller.php" method="post">
+
+		<p><input type="text" name="title" placeholder="Titre : "></p>		
+		<p><textarea rows="30" cols="150" name="content" style="margin: 0px; width: 9px; height: 9px;"></textarea></p>
+		<p><input type="submit" name="create" value="J&#39;ai terminé cette page."></p>
+
+	</form>
+
+	<h2> Lire les pages déjà écrites </h2>
+
+	<form action="http://localhost/roman/controller/controller.php" method="post">
+		
+		<p><input type="submit" name="read_all" value="Je souhaite lires le articles déjà rédigés."></p>
+
+	</form>
+
+	<h2> Je souhaite lire / gérer une certaine page </h2>
+	
+	<form action="http://localhost/roman/controller/controller.php" method="post">
+		
+		<p><input type="text" name="id" placeholder="Veuillez saisir l&#39;identifiant de l&#39;article concerné"></p>
+		<p><input type="submit" name="read_by_id" value="Je souhaite lire cet article."></p>
+
+	</form>
+
+	<h2> Je souhaite supprimer un article. </h2>
+
+	<form action="http://localhost/roman/controller/controller.php" method="post">
+		
+		<p><input type="text" name="id_delete" placeholder="Saisissez ici l&#39;ID de l&#39;article à supprimer."></p>
+		<p><input type="submit" name="delete" value="Supprimer l&#39;article."></p>
+
+	</form>
+
+	<h2> Je souhaite modifier un article. </h2>
+
+	<form action="http://localhost/roman/controller/controller.php" method="post">
+		
+		<p><input type="text" name="id_update" placeholder="Saisissez ici l&#39;ID de l&#39;article à modifier. "></p>
+		<p><input type="submit" name="update" placeholder="Modifier l&#39;article."></p>
+
+	</form>
+
+
+
+</body></html>

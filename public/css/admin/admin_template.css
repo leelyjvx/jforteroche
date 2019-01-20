@@ -1,0 +1,15 @@
+body {
+	background-color: rgba(1, 163, 164,1.0);
+}
+
+.navbar a {
+	color: white;
+}
+
+.navbar a:hover {
+	color: black;
+}
+
+.box2 {
+	padding-top: 5px;
+}
