@@ -16,6 +16,10 @@ if (isset($_GET['action'])) {
 		admin();
 	}
 
+	if ($_GET['action'] === 'createpost') {
+		createpost();
+	} 
+
 	if ($_GET['action'] === 'addpost') { // Ajouter un post
 		addpost();
 	}
@@ -26,6 +30,10 @@ if (isset($_GET['action'])) {
 
 	if ($_GET['action'] === 'deletepost') { // Suprimer un post
 		deletepost();
+	}
+
+	if ($_GET['action'] === 'readpost') {
+		readpost();
 	}
 
 	if ($_GET['action'] === 'updatepost') { // MAJ d'un post

@@ -27,4 +27,4 @@
 
 
 <?php $content = ob_get_clean(); ?>
-<?php require('..\public\templates\admin\admin_template.php');
+<?php require('..\view\templates\admin\admin_template.php');

@@ -30,7 +30,7 @@ class PostManager extends Manager {
 
 	public function readID($id) {
 
-		$req = $this->_db->prepare('SELECT id, title, content FROM posts WHERE id = ?');
+		$req = $this->db->prepare('SELECT id, title, content FROM posts WHERE id = ?');
 		$req->execute(array($id));
 		$data = $req->fetch(PDO::FETCH_ASSOC);
 		$post = new Post($data['title'], $data['content']);
@@ -41,7 +41,7 @@ class PostManager extends Manager {
 
 	public function delete($id) {
 
-		$req = $this->_db->prepare('DELETE FROM posts WHERE id = :id');
+		$req = $this->db->prepare('DELETE FROM posts WHERE id = :id');
 		$req->execute([':id' => $id]);
 		return $req;
 
@@ -49,7 +49,7 @@ class PostManager extends Manager {
 
 	public function update($post) {
 
-		$req = $this->_db->prepare('UPDATE posts SET title = :title, content = :content WHERE id = :id');
+		$req = $this->db->prepare('UPDATE posts SET title = :title, content = :content WHERE id = :id');
 		$req->execute([':title' => $post->getTitle(), ':content' => $post->getContent(), ':id' => $post->getID()]);
 		var_dump($req);
 		return $req;
