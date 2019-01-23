@@ -19,9 +19,7 @@ function addpost() {
 	$post = new Post($_POST['title'], $_POST['content']);
 	$manager = new PostManager();
 	$manager->addpost($post);
-	require("../view/templates/admin/admin_template.php");
-	echo $post->getTitle() . "</br>" ;
-	echo $post->getContent() . "</br>" ;
+	require("../view/admin/validepost.php");
 }
 
 function createpost() {
@@ -37,15 +35,17 @@ function readposts() {
 function readpost() {
 	$manager = new PostManager();
 	$post = $manager->readID($_GET['id']);
+	require("../view/admin/uniquepost.php");
 
 //remplacer avec un require !! :)
-	echo $post->getTitle() . "<br/>" ;
+/*	echo $post->getTitle() . "<br/>" ;
 	echo $post->getContent() . "<br/>" ;
 	echo ' <form action = "#" method = "post">' ;
 	echo ' <p> <input type = "submit" name = "delete" value = "Supprimer cet article."/> </p>' ;
 	echo ' <p> <input type = "submit" name = "update" value = "Modifier cet article. " </p> ' ;
 	echo ' <p> <a href = "../view/posts_edit.php"> Retour </a> </p> ' ;
 	echo ' </form>' ;
+	*/
 }
 
 function deletepost() {

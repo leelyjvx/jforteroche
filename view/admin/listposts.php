@@ -4,8 +4,8 @@
 
 <?php foreach ($posts as $post) : ?>
 
-	<h2><a href="../public/index.php?action=readpost&id=<?= $post->getID();?>"> <?= $post->getTitle(); ?> </a> </h2>
-	<p> <?= $post->getContent(); ?> </p>
+	<div class="title_post"><h2><a href="../public/index.php?action=readpost&id=<?= $post->getID();?>"> <?= $post->getTitle(); ?> </a> </h2></div>
+	<div class="content_post"><p> <?= $post->getContent(); ?> </p></div>
 	<p>
 		<a class="btn btn-success" href="../public/index.php?action=updatepost&id=<?= $post->getID();?>" onclick="return confirm('Êtes-vous sûr de vouloir modifier cet article?')"> Modifier l'article </a>
 		<a class="btn btn-danger" href="../public/index.php?action=deletepost&id=<?= $post->getID(); ?>" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article?')"> Supprimer l'article </a>

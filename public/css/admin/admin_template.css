@@ -1,5 +1,21 @@
 body {
-	background-color: rgba(1, 163, 164,1.0);
+	background-image: url('../../pictures/back10.jpg');
+	height: 100%;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+body, html {
+	height: 100%;
+}
+
+.navbar {
+	background-color: rgba(41, 128, 182,0.3);
+	margin: auto;
+	padding: auto;
 }
 
 .navbar a {
@@ -11,5 +27,61 @@ body {
 }
 
 .box2 {
-	padding-top: 5px;
+	padding-top: 25px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.arrow {
+	position: fixed;
+	top: 95%;
+	right: 2%;
+}
+
+.buttons {
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+
+.title_post {
+	font-family: "Tangerine";
+}
+
+.title_unique {
+	font-family: "Tangerine";
+}
+
+.content_post {
+	color: white;
+}
+
+.content_unique {
+	padding-top: 50px;
+}
+
+.off_box {
+	margin-left: 180px;
+	margin-right: 180px;
+	padding-bottom: 50px;
+	background-color: rgba(236, 240, 241,0.5);
+}
+
+.posts_admin {
+	background-image: url(../../pictures/post.jpg);
+	background-position: center;
+	padding-bottom: 300px;
+}
+
+.comments_admin {
+	background-image: url(../../pictures/comment.jpg);
+	background-position: 10px 700px;
+	padding-bottom: 300px;
 }
