@@ -36,42 +36,32 @@ function readpost() {
 	$manager = new PostManager();
 	$post = $manager->readID($_GET['id']);
 	require("../view/admin/uniquepost.php");
-
-//remplacer avec un require !! :)
-/*	echo $post->getTitle() . "<br/>" ;
-	echo $post->getContent() . "<br/>" ;
-	echo ' <form action = "#" method = "post">' ;
-	echo ' <p> <input type = "submit" name = "delete" value = "Supprimer cet article."/> </p>' ;
-	echo ' <p> <input type = "submit" name = "update" value = "Modifier cet article. " </p> ' ;
-	echo ' <p> <a href = "../view/posts_edit.php"> Retour </a> </p> ' ;
-	echo ' </form>' ;
-	*/
 }
 
 function deletepost() {
 	$manager = new PostManager();
 	$manager->delete($_GET['id']);
+	$title = "Article supprimé";
+	$content = "<p> L'article a bien été supprimé! </p> </br> <a href='../public/index.php?action=readposts' class='btn btn-dark'> Retour à la liste </a>";
+	require("../view/templates/admin/admin_template.php");
+}
+
+function update() {
+	$manager = new PostManager();
+	$post = $manager->readID($_GET['id']);
+	require("../view/admin/updatepost.php");
 }
 
 function updatepost() {
-	$manager = new PostManager();
-	$post = $manager->readID($_GET['id']);
-
-	// mettre un require à la place!! ;))
-
-	echo '<form action = "#" method = "post">';
-	echo '<p> <input type="text" name="id" value="' .$post->getID(). '"> </p>';
-	echo '<p> <input type="text" name="title" value="' .$post->getTitle(). '"> </p>';
-	echo '<p> <textarea name="content">' .$post->getContent(). '</textarea> </p>';
-	echo '<p> <input type="submit" name="modif">' ;
-
-
-	if (isset($_POST['id']) && $_POST['id'] !== '' AND isset($_POST['title']) && $_POST['title'] !== '' AND isset($_POST['modif'])) {
-		
+	if ($_POST['title'] != '' || $_POST['content'] !== '') {
 		$post = new Post($_POST['title'], $_POST['content']);
 		$post->setID($_POST['id']);
-		var_dump($post);
 		$manager = new PostManager();
 		$manager->update($post);
+		require("../view/admin/updatedpost.php");	
+	} 
+	else {
+		require("../view/admin/admin.php");
 	}
+	
 }

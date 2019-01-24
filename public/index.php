@@ -38,6 +38,11 @@ if (isset($_GET['action'])) {
 
 	if ($_GET['action'] === 'updatepost') { // MAJ d'un post
 	updatepost();
+
+}
+
+if ($_GET['action'] === 'update') {
+	update();
 }
 
 

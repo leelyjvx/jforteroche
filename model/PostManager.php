@@ -51,7 +51,6 @@ class PostManager extends Manager {
 
 		$req = $this->db->prepare('UPDATE posts SET title = :title, content = :content WHERE id = :id');
 		$req->execute([':title' => $post->getTitle(), ':content' => $post->getContent(), ':id' => $post->getID()]);
-		var_dump($req);
 		return $req;
 	}
 }

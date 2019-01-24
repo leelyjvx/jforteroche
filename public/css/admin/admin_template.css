@@ -13,7 +13,7 @@ body, html {
 }
 
 .navbar {
-	background-color: rgba(41, 128, 182,0.3);
+	background-color: rgba(44, 62, 80,0.8);
 	margin: auto;
 	padding: auto;
 }
@@ -53,6 +53,8 @@ a:hover {
 
 .title_post {
 	font-family: "Tangerine";
+	color: black;
+	text-align: center;	
 }
 
 .title_unique {
@@ -60,11 +62,13 @@ a:hover {
 }
 
 .content_post {
-	color: white;
+	color: black;
+	text-align: center;
+	padding-top: 50px;
 }
 
 .content_unique {
-	padding-top: 50px;
+	padding-top: 70px;
 }
 
 .off_box {
@@ -74,14 +78,55 @@ a:hover {
 	background-color: rgba(236, 240, 241,0.5);
 }
 
-.posts_admin {
-	background-image: url(../../pictures/post.jpg);
-	background-position: center;
-	padding-bottom: 300px;
+.block_admin {
+	padding-top: 260px;
+	padding-bottom: 269px;
 }
 
-.comments_admin {
-	background-image: url(../../pictures/comment.jpg);
-	background-position: 10px 700px;
-	padding-bottom: 300px;
+.admin a {
+	color: white;
+	background-color: rgba(30, 39, 46,0.7);
+	border: rgba(30, 39, 46,1.0);
+}
+
+.admin a:hover {
+	color: #16a085;
+}
+
+.admin {
+	text-align: center;
+}
+
+.read_all {
+	background-color: rgba(210, 218, 226,0.8);
+	padding-bottom: 2px;
+}
+
+.separe {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.one {
+	padding-top: 5px;
+}
+
+.one a {
+	color: black;
+	font-size: 40px;
+	margin-left: 50px;
+}
+
+.one a:hover {
+	font-size: 42px;
+}
+
+h3  {
+	font-size: 50px;
+	text-align: center;
+}
+
+h5 {
+	font-family: Arial;
+	font-size: 17px;
 }

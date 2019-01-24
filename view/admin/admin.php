@@ -4,23 +4,13 @@
 
 <?php ob_start(); ?>
 
-<div class="admin_home">
-	<div class="posts_admin">
-		<div class="btn-group-md">
-			<fieldset>
-				<legend>Gestion des articles</legend>
-				<a class="btn btn-dark" href="../public/index.php?action=createpost"> Créer un article </a>
-				<a class="btn btn-dark" href="../public/index.php?action=readposts"> Lire les articles </a>
-			</fieldset>
-		</div>
-	</div>
-	<div class="comments_admin">
-		<div class="btn-group-md">
-			<fieldset>
-				<legend>Gestion des commentaires</legend>
-				<a class="btn btn-dark" href="../public/index.php?action=readcomments"> Voir les commentaires </a>
-				<a class="btn btn-dark" href="../public/index.php?action=reportedcomments"> Commentaires signalés </a>	
-			</fieldset>
+<div class="block_admin">
+	<div class="admin">
+		<div class="btn-block">
+			<a href="../public/index.php?action=createpost" class="btn btn-light"> Créer un article </a>
+			<a href="../public/index.php?action=readposts" class="btn btn-light"> Lire les articles </a>
+			<a href="../public/index.php?action=comments" class="btn btn-light"> Consulter tous les commentaires </a>
+			<a href="../public/index.php?action=reported" class="btn btn-light"> Commentaires signalés </a>
 		</div>
 	</div>
 </div>
