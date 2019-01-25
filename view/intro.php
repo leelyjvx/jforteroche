@@ -18,7 +18,7 @@
 				<div class="navbar navbar-expand-md py-1 fixed-top justify-content-center">
 					<div class="d-flex p-2 m-1">
 						<div class="navbar-brand"> <a href="../public/index.php?action=intro"><img src="../public/pictures/mini.png" height="30"></a></div>
-						<a class="nav-link" href="../public/index.php?action=home"> Accueil </a>
+						<a class="nav-link" href="../public/index.php?action=homepage"> Accueil </a>
 						<a class="nav-link" href="../public/index.php?action=chapters"> Chapitres </a>
 						<a class="nav-link" href="../public/index.php?action=author"> Auteur </a>
 						<a class="nav-link" href="../public/index.php?action=contact"> Contact </a>
@@ -35,7 +35,7 @@
 					<div id="intro">
 						<h1> Billet simple pour l'Alaska </h1>
 						<p> Prêts pour l'aventure ? </p>
-						<center><a class="btn btn-light" href="../public/index.php?action=home"> En avant. </a></center>
+						<center><a class="btn btn-light" href="../public/index.php?action=homepage"> En avant. </a></center>
 					</div>
 				</nav>
 			</div>

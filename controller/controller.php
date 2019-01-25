@@ -2,10 +2,14 @@
 
 require('../model/Post.php');
 require('../model/PostManager.php');
+require('../model/Comment.php');
+require('../model/CommentManager.php');
 
 function intro() {
 	require("../view/intro.php");
 }
+
+/* Partie ADMIN/CRUD jusque ligne 69 */
 
 function connect() {
 	require("../view/admin/connect.php");
@@ -62,6 +66,33 @@ function updatepost() {
 	} 
 	else {
 		require("../view/admin/admin.php");
-	}
-	
+	}	
+}
+
+function author() {
+	require("../view/user/author.php");
+}
+
+function chapters() {
+	$manager = new PostManager();
+	$posts = $manager->read();
+	require("../view/user/chapters.php");
+}
+
+function post() {
+	$manager = new PostManager();
+	$post = $manager->readID($_GET['id']);
+	require("../view/user/post.php");
+
+	$commentmanager = new CommentManager();
+	$comments = $commentmanager->readComments($_GET['id']);
+	var_dump($comments);
+}
+
+function addcomment() {
+	$comment = new Comment($_POST['pseudo'], $_POST['comment']);
+	$comment->setCommentID($_GET['id']);
+	$manager = new CommentManager();
+	$try = $manager->addComment($comment);
+	var_dump($try);
 }
