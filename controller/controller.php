@@ -82,17 +82,15 @@ function chapters() {
 function post() {
 	$manager = new PostManager();
 	$post = $manager->readID($_GET['id']);
-	require("../view/user/post.php");
-
 	$commentmanager = new CommentManager();
 	$comments = $commentmanager->readComments($_GET['id']);
-	var_dump($comments);
+	require("../view/user/post.php");
+
 }
 
 function addcomment() {
 	$comment = new Comment($_POST['pseudo'], $_POST['comment']);
-	$comment->setCommentID($_GET['id']);
+	$comment->setPostID($_POST['postID']);
 	$manager = new CommentManager();
 	$try = $manager->addComment($comment);
-	var_dump($try);
 }
