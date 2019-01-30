@@ -23,7 +23,7 @@ class CommentManager extends Manager {
 		$req = $this->db->prepare('SELECT * FROM comments WHERE postid = ? ORDER BY commentdate DESC');
 		$req->execute(array($postID));
 		while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-			$comments[] = new Comment($data['pseudo'], $data['comment']);
+			$comments[] = new Comment($data['postid'], $data['pseudo'], $data['comment']);
 		}
 		return $comments;
 	}

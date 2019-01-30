@@ -16,9 +16,8 @@ function connect() { // Affichage page connexion -- go to connect page
 }
 
 function valide() {
-		if ($_POST['username'] === 'jf' && $_POST['password'] === 'p3') {
-			require('../view/admin/admin.php');
-		}
+	if ($_POST['username'] === 'jf' && $_POST['password'] === 'p3') {
+		require('../view/admin/admin.php');
 	} elseif ($_POST['username'] !== 'jf' && $_POST['password'] !==  'p3') {
 		require('../view/admin/connect.php');
 	}
@@ -99,7 +98,7 @@ require("../view/user/post.php");
 }
 
 function addcomment() { // Ecrire un commentaire -- function to create a comment
-	$comment = new Comment($_POST['pseudo'], $_POST['comment']);
+	$comment = new Comment($_GET['postid'], $_POST['pseudo'], $_POST['comment']);
 	$comment->setPostID($_POST['postID']);
 	$manager = new CommentManager();
 	$try = $manager->addComment($comment);
@@ -116,5 +115,6 @@ function readcomment() {
 
 function report() {
 	$commentmanager = new CommentManager();
-	$commentmanager->report($_GET['id']);
+	$comment = $commentmanager->report($_GET['id']);
+	var_dump($comment);
 }

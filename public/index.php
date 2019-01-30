@@ -36,6 +36,7 @@ if (isset($_GET['action'])) {
 	}
 
 	if ($_GET['action'] === 'report') { // Signaler un commentaire
+		$_GET['id'] === (int) $_GET['id'];
 		report();
 	}
 

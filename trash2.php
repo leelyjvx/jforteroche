@@ -1,3 +1,28 @@
+
+	public function readcomments($postID) {
+
+		$comments = [];
+		$req = $this->db->prepare('SELECT * FROM comments WHERE postid = ? ORDER BY commentdate DESC');
+		$req->execute(array($postID));
+		while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+			$comments = new Comment($data['pseudo'], $data['comment']);
+			$comments->setID($data['id']);
+			$comment
+		}
+		return $comments;
+	}
+
+	public function readcomment($id) {
+
+		$req = $this->db->prepare('SELECT * FROM comments WHERE id = ?');
+		$req->execute(array($id));
+		$data = $req->fetch(PDO::FETCH_ASSOC);
+		$comment = new Comment($data['postid'], $data['pseudo'], $data['comment']);
+		$comment->setID($data['id']);
+		return $comment;
+
+	}
+
 try {
 
 	if ($_GET['action']) {

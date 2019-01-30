@@ -9,7 +9,8 @@ class Comment {
 	protected $_commentdate;
 	protected $_reported;
 
-	public function __construct($pseudo, $comment) {
+	public function __construct($postID, $pseudo, $comment) {
+		$this->_postID = $postID;
 		$this->_pseudo = $pseudo;
 		$this->_comment = $comment;
 	}

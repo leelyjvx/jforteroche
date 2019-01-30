@@ -27,7 +27,7 @@
 
 		<p><strong><?= $comment->getPseudo(); ?></strong></p>
 		<p><?= $comment->getComment(); ?></p>
-		<p><a href="index.php?action=report&id=<?= $comment->getID(); ?>" class="btn btn-danger" onclick="return confirm('Voulez-vous signaler ce commentaire?')"> Signaler ce commentaire </a></p>
+		<p><a href="index.php?action=report&id=<?=$comment->getID();?>">Report</a></p>
 
 	<?php endforeach; ?>
 </div>
