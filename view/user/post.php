@@ -15,7 +15,7 @@
 			<p><label for="pseudo"> Pseudo : </label></p>
 			<p><input type="text" name="pseudo" id="pseudo" placeholder="Max. 50 caractères"></p>
 			<p><label for="comment"> Commentaire : </label></p>
-			<p><textarea rows="10" cols="151" name="comment" id="comment" > Max. 500 caractères </textarea></p>
+			<p><textarea rows="10" cols="151" name="comment" id="comment" > </textarea></p>
 			<p><input type="submit" name="send_comment" value="Envoyer mon commentaire" class="btn btn-light"></p>
 
 		</fieldset>
@@ -27,7 +27,7 @@
 
 		<p><strong><?= $comment->getPseudo(); ?></strong></p>
 		<p><?= $comment->getComment(); ?></p>
-		<p><a href="../public/index.php?action=report" class="btn btn-outline-danger"> Signaler ce commentaire </a></p>
+		<p><a href="index.php?action=report&id=<?= $comment->getID(); ?>" class="btn btn-danger" onclick="return confirm('Voulez-vous signaler ce commentaire?')"> Signaler ce commentaire </a></p>
 
 	<?php endforeach; ?>
 </div>
@@ -35,4 +35,4 @@
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require("../view/templates/user/user_template.php") ?>
+<?php require("../view/templates/user/user_template.php") ?>  

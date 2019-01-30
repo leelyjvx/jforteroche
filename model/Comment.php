@@ -14,7 +14,7 @@ class Comment {
 		$this->_comment = $comment;
 	}
 
-	public function getCommentID() {
+	public function getID() {
 		return $this->_id;
 	}
 
@@ -38,8 +38,8 @@ class Comment {
 		return $this->_reported;
 	}
 
-	public function setCommentID($commentID) {
-		$this->_id = $commentID;
+	public function setID($id) {
+		$this->_id = $id;
 	}
 
 	public function setPostid($postID) {

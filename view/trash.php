@@ -1,4 +1,10 @@
 
+		$req = $this->db->prepare('SELECT * FROM comments WHERE id = ?');
+		$req->execute(array($id));
+		$data = $req->fetch(PDO::FETCH_ASSOC);
+		$comment = new Comment($data['postid'], $data['pseudo'], $data['comment']);
+		$comment->setID($data['id']);
+		return $comment;
 
 
 

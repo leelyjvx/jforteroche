@@ -18,7 +18,7 @@
 			<img src="../public/pictures/User_Avatar_2.png">
 
 			<div class="row">
-				<form action="../public/index.php?action=admin" method="post">
+				<form action="../public/index.php?action=valide" method="post">
 					<div class="form-group ">
 
 						<p>
@@ -31,7 +31,7 @@
 						</p>
 						<div class="connect">
 							<div class="btn-group">
-								<a href="../public/index.php?action=admin" class="btn btn-outline-light"> Connexion </a>  
+								<input type="submit" name="connexion" class="btn btn-outline-light" value="Connexion">
 								<a href="../public/index.php?action=intro" class="btn btn-warning"> Accueil </a>
 							</div>
 						</div>

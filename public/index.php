@@ -2,33 +2,42 @@
 
 include('../controller/controller.php');
 
+
 if (isset($_GET['action'])) {
 
 	if ($_GET['action'] === 'homepage') { // Page d'accueil
 	homepage();
 }
 
-if ($_GET['action'] === 'author') { // Page auteur
-	author();
-}
+	if ($_GET['action'] === 'author') { // Page auteur
+		author();
+	}
 
-if ($_GET['action'] === 'chapters') { // Page chapitres public
-	chapters();
-}
+	if ($_GET['action'] === 'chapters') { // Page chapitres public
+		chapters();
+	}
 
-if ($_GET['action'] === 'post') { // Article unique public
-	post();
-}
+	if ($_GET['action'] === 'post') { // Article unique public
+		post();
+	}
 
-if ($_GET['action'] === 'contact') { // Formulaire contact
-	contact();
-}
+	if ($_GET['action'] === 'contact') { // Formulaire contact
+		contact();
+	}
 
 // Commentaires
 
-if ($_GET['action'] === 'addcomment') {
-	addcomment();
-}
+	if ($_GET['action'] === 'addcomment') { // Ajouter un commentaire
+		addcomment();
+	}
+
+	if ($_GET['action'] === 'readComment') { // Lire un commentaire
+		readComment();
+	}
+
+	if ($_GET['action'] === 'report') { // Signaler un commentaire
+		report();
+	}
 
 	if ($_GET['action'] === 'intro') { // Aller page intro
 		intro();
@@ -36,6 +45,10 @@ if ($_GET['action'] === 'addcomment') {
 
 	if ($_GET['action'] === 'connect') { // Aller page de connexion
 		connect();
+	}
+
+	if ($_GET['action'] === 'valide') { // Validation de la connexion
+		valide();
 	}
 
 	// ADMIN
@@ -68,8 +81,8 @@ if ($_GET['action'] === 'addcomment') {
 	updatepost();
 }
 
-if ($_GET['action'] === 'update') { // Maj d'un post
-update();
+	if ($_GET['action'] === 'update') { // Maj d'un post
+	update();
 }
 
 
