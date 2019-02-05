@@ -23,7 +23,21 @@ class CommentManager extends Manager {
 		$req = $this->db->prepare('SELECT * FROM comments WHERE postid = ? ORDER BY commentdate DESC');
 		$req->execute(array($postID));
 		while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-			$comments[] = new Comment($data['postid'], $data['pseudo'], $data['comment']);
+			$comment = new Comment($data['pseudo'], $data['comment']);
+			$comment->setID($data['id']);
+			$comments[] = $comment;
+		}
+		return $comments;
+	}
+
+	public function comments() {
+
+		$comments = [];
+		$req = $this->db->query('SELECT * FROM comments');
+		while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+			$comment = new Comment($data['postid'], $data['pseudo'], $data['comment']);
+			$comment->setID($data['id']);
+			$comments[] = $comment;
 		}
 		return $comments;
 	}
@@ -45,9 +59,23 @@ class CommentManager extends Manager {
 		return $req;
 	}
 
-	public function reported($id) {
-		
+	public function reported() {
+		$comments = [];
+		$req = $this->db->query('SELECT * from comments WHERE reported > 0 ORDER BY commentdate DESC');
+		$req->execute(array($id));
+		while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+			$comment = new Comment($data['postid'], $data['pseudo'], $data['comment'], $data['commentdate']);
+			$comments[] = $comment; 
+		}
+		return $comments;
 	}
+
+	public function deletecomment($id) {
+		$req = $this->db->prepare('DELETE FROM comments WHERE id = :id');
+		$req->execute([':id' => $id]);
+		return $req;
+	}
+
 }
 
 // WHERE postid = $postid
@@ -56,6 +84,6 @@ class CommentManager extends Manager {
 // lire un commentaire OK
 // lire tous les commentaires OK
 // lire tous les commentaires d'une page ou d'un article CHECKKKK
-// signaler un commentaire
-// voir les commentaires signalés
-// supprimer un commentaire
+// signaler un commentaire OK
+// voir les commentaires signalés OK
+// supprimer un commentaire OK

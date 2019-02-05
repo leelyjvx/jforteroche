@@ -40,6 +40,14 @@ if (isset($_GET['action'])) {
 		report();
 	}
 
+	if ($_GET['action'] === 'reported') {
+		reported();
+	}
+
+	if ($_GET['action'] === 'comments') {
+		comments();
+	}
+
 	if ($_GET['action'] === 'intro') { // Aller page intro
 		intro();
 	}

@@ -98,7 +98,7 @@ require("../view/user/post.php");
 }
 
 function addcomment() { // Ecrire un commentaire -- function to create a comment
-	$comment = new Comment($_GET['postid'], $_POST['pseudo'], $_POST['comment']);
+	$comment = new Comment($_POST['pseudo'], $_POST['comment']);
 	$comment->setPostID($_POST['postID']);
 	$manager = new CommentManager();
 	$try = $manager->addComment($comment);
@@ -116,5 +116,16 @@ function readcomment() {
 function report() {
 	$commentmanager = new CommentManager();
 	$comment = $commentmanager->report($_GET['id']);
-	var_dump($comment);
+}
+
+function reported() {
+	$comment = new CommentManager();
+	$comment->reported();
+	require("../view/admin/reported.php");
+}
+
+function comments() {
+	$commentmanager = new CommentManager();
+	$comments = $commentmanager->comments();
+	require("../view/admin/comments.php");
 }

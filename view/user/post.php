@@ -27,7 +27,7 @@
 
 		<p><strong><?= $comment->getPseudo(); ?></strong></p>
 		<p><?= $comment->getComment(); ?></p>
-		<p><a href="index.php?action=report&id=<?=$comment->getID();?>">Report</a></p>
+		<p><a href="index.php?action=report&id=<?=$comment->getid();?>">Report</a></p>
 
 	<?php endforeach; ?>
 </div>
