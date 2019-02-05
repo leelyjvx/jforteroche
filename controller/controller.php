@@ -119,8 +119,8 @@ function report() {
 }
 
 function reported() {
-	$comment = new CommentManager();
-	$comment->reported();
+	$commentmanager = new CommentManager();
+	$comments = $commentmanager->reported();
 	require("../view/admin/reported.php");
 }
 
@@ -128,4 +128,9 @@ function comments() {
 	$commentmanager = new CommentManager();
 	$comments = $commentmanager->comments();
 	require("../view/admin/comments.php");
+}
+
+function deletecomment() {
+	$commentmanager = new CommentManager();
+	$commentmanager->deletecomment($_GET['id']);
 }

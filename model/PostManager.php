@@ -41,10 +41,8 @@ class PostManager extends Manager {
 
 	public function delete($id) {
 
-		$req = $this->db->prepare('DELETE FROM posts WHERE id = :id');
-		$req->execute([':id' => $id]);
+		$req = $this->db->exec('DELETE FROM comments WHERE id = ' . $id);
 		return $req;
-
 	}
 
 	public function update($post) {

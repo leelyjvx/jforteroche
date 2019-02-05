@@ -33,10 +33,11 @@ class CommentManager extends Manager {
 	public function comments() {
 
 		$comments = [];
-		$req = $this->db->query('SELECT * FROM comments');
+		$req = $this->db->query('SELECT * FROM comments ORDER BY commentdate DESC');
 		while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-			$comment = new Comment($data['postid'], $data['pseudo'], $data['comment']);
+			$comment = new Comment($data['pseudo'], $data['comment']);
 			$comment->setID($data['id']);
+			$comment->setPostID($data['postid']);
 			$comments[] = $comment;
 		}
 		return $comments;
@@ -62,9 +63,10 @@ class CommentManager extends Manager {
 	public function reported() {
 		$comments = [];
 		$req = $this->db->query('SELECT * from comments WHERE reported > 0 ORDER BY commentdate DESC');
-		$req->execute(array($id));
 		while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
-			$comment = new Comment($data['postid'], $data['pseudo'], $data['comment'], $data['commentdate']);
+			$comment = new Comment($data['pseudo'], $data['comment'], $data['commentdate']);
+			$comment->setPostID($data['postid']);
+			$comment->setID($data['id']);
 			$comments[] = $comment; 
 		}
 		return $comments;

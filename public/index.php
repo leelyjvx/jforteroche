@@ -5,6 +5,8 @@ include('../controller/controller.php');
 
 if (isset($_GET['action'])) {
 
+	// PUBLIC
+
 	if ($_GET['action'] === 'homepage') { // Page d'accueil
 	homepage();
 }
@@ -44,9 +46,15 @@ if (isset($_GET['action'])) {
 		reported();
 	}
 
+	if ($_GET['action'] === 'deletecomment') {
+		deletecomment();
+	}
+
 	if ($_GET['action'] === 'comments') {
 		comments();
 	}
+
+	// INTRO
 
 	if ($_GET['action'] === 'intro') { // Aller page intro
 		intro();

@@ -4,9 +4,10 @@
 
 <?php foreach ($comments as $comment) : ?>
 
-	<?= $comment->getPostID();?>
+	<em>Chapitre <?= $comment->getPostID();?></em>
 	<h5><strong><?= $comment->getPseudo(); ?></strong></h5>
 	<p><?= $comment->getComment(); ?></p>
+	<p><a class="btn btn-danger" href="../../public/index.php?action=deletecomment&id=<?= $comment->getID(); ?>"> Supprimer le commentaire? </a></p>
 
 <?php endforeach; ?>	
 
