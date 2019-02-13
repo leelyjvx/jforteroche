@@ -1,8 +1,8 @@
-
-
 <?php $title = 'Administration'; ?>
 
 <?php ob_start(); ?>
+
+BIENVENUE <?= $_SESSION['username']; ?>
 
 <div class="block_admin">
 	<div class="admin">
