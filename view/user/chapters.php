@@ -8,7 +8,7 @@
 			<div class="card-body">
 				<article>
 					<h3 class="card-title"><a href="../public/index.php?action=post&id=<?= $post->getID();?>"><?= $post->getTitle(); ?></a></h3>
-					<p class="card-text"><?= substr($post->getContent(), 0, 300); ?> ... </p>
+					<p class="card-text"><?= substr($post->getContent(), 0, 400); ?> ... </p>
 					<a class="btn btn-dark" href="../public/index.php?action=post&id=<?= $post->getID();?>">lire la suite</a>
 				</article>
 			</div>

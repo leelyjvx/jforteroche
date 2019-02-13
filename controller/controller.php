@@ -4,6 +4,8 @@ require('../model/Post.php');
 require('../model/PostManager.php');
 require('../model/Comment.php');
 require('../model/CommentManager.php');
+require('../model/Admin.php');
+require('../model/AdminManager.php');
 
 function intro() { // Affichage page intro -- go to intro's page
 require("../view/intro.php");
@@ -16,20 +18,66 @@ function connect() { // Affichage page connexion -- go to connect page
 }
 
 function valide() {
-	if ($_POST['username'] === 'jf' && $_POST['password'] === 'p3') {
-		require('../view/admin/admin.php');
-	} elseif ($_POST['username'] !== 'jf' && $_POST['password'] !==  'p3') {
-		require('../view/admin/connect.php');
+	
+	$admin = new Admin($_POST['username'], $_POST['password']);
+	$adminmngr = new AdminManager();
+	$session = $adminmngr->check($admin);
+
+	if ($session === false) {
+		header("location:../public/index.php?action=connect");
+		exit();
+
+	} else {
+
+		session_start();
+		//session_register($_POST['username']);
+		$_SESSION['username'] = $_POST['username'];
+		header('location:../public/index.php?action=admin');	
 	}
 }
 
+function auth() {
+
+	session_start();
+	if (!isset($_SESSION['username'])) {
+		header('location:../public/index.php?action=connect');
+	}
+}
+
+function is_connect() {
+	return isset($_SESSION['username']);
+}
+
+function disconnect() {
+
+	session_start();
+	session_destroy();
+	header('location:../public/index.php?action=intro');
+
+}
+
+	// &fctn verif sessO
+	// if id = valide / ouvrir sess
+	// if session en cours // SESSION STATUTS?
+	// Laisse passer
+	// Else form connexion
+
+	/*$isCorrect = password_verify($_POST['password'], $result['password']);
+
+	if (!$is_correct) {
+		echo "Nop";
+	} else {
+		if ($isCorrect) {
+			session_start();
+		}
+	}*/
 
 function admin() { // Affichage menu admin -- go to admin page
 	require("../view/admin/admin.php");
 }
 
 function addpost() { // Ajouter un article -- function to create a post
-	$post = new Post($_POST['title'], $_POST['content']);
+	$post = new Post(htmlspecialchars_decode($_POST['title']), htmlspecialchars_decode($_POST['content']));
 	$manager = new PostManager();
 	$manager->addpost($post);
 	require("../view/admin/validepost.php");
@@ -37,7 +85,7 @@ function addpost() { // Ajouter un article -- function to create a post
 
 function createpost() { // Page de création des articles -- form page for create a post
 	require("../view/admin/createpost.php");
-}
+}	
 
 function readposts() { // Affichage de tous les articles -- read all posts
 	$manager = new PostManager();
@@ -102,6 +150,7 @@ function addcomment() { // Ecrire un commentaire -- function to create a comment
 	$comment->setPostID($_POST['postID']);
 	$manager = new CommentManager();
 	$try = $manager->addComment($comment);
+	header('location:../public/index.php?action=chapters');
 }
 
 function readcomment() {

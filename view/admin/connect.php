@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<title> Connexion </title>
+	<title> <?php $title = 'Connexion'; ?></title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-reboot.min.css">
@@ -10,10 +10,12 @@
 </head>
 <body>
 
+	<?php ob_start(); ?>
+
 	<div class="container">
 		<div class="boite">
-			<h2> Vous ne passerez pas !</h2>
-			<h5>... Sauf si vous franchissez la porte ;)</h5>
+			<h2> Bienvenue !</h2>
+			<h5> Merci de vous authentifier</h5>
 
 			<img src="../public/pictures/User_Avatar_2.png">
 
@@ -40,6 +42,9 @@
 			</div>
 		</div>
 	</div>
+
+	<?php $content = ob_get_clean(); ?>
+	<?php require('../view/templates/admin/connect_template.php');?>
 
 </body>
 </html>
