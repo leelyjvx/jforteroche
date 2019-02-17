@@ -78,6 +78,12 @@ class CommentManager extends Manager {
 		return $req;
 	}
 
+	public function validecomment($id) {
+		$req = $this->db->prepare('UPDATE comments SET reported = reported = 0 WHERE id = :id');
+		$req->execute([':id' => $id]);
+		return $req;
+	}
+
 }
 
 // WHERE postid = $postid

@@ -53,6 +53,11 @@ if (isset($_GET['action'])) {
 		deletecomment();
 	}
 
+	if ($_GET['action'] === 'validecomment') {
+		auth();
+		validecomment();
+	}
+
 	if ($_GET['action'] === 'comments') {
 		auth();
 		comments();
@@ -85,7 +90,7 @@ if (isset($_GET['action'])) {
 	}
 
 	if ($_GET['action'] === 'createpost') {
-		//auth();
+		auth();
 		createpost();
 	} 
 

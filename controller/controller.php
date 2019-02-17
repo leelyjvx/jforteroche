@@ -183,3 +183,8 @@ function deletecomment() {
 	$commentmanager = new CommentManager();
 	$commentmanager->deletecomment($_GET['id']);
 }
+
+function validecomment() {
+	$commentmanager = new CommentManager();
+	$commentmanager->validecomment($_GET['id']);
+}
