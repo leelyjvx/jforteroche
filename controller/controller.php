@@ -7,40 +7,11 @@ require('../model/CommentManager.php');
 require('../model/Admin.php');
 require('../model/AdminManager.php');
 
-function intro() { // Affichage page intro -- go to intro's page
-require("../view/intro.php");
-}
-
-/* Partie ADMIN/CRUD jusque ligne 69 */
-
-function connect() { // Affichage page connexion -- go to connect page
-	require("../view/admin/connect.php");
-}
-
-function valide() {
-	
-	$admin = new Admin($_POST['username'], $_POST['password']);
-	$adminmngr = new AdminManager();
-	$session = $adminmngr->check($admin);
-
-	if ($session === false) {
-		header("location:../public/index.php?action=connect");
-		exit();
-
-	} else {
-
-		session_start();
-		//session_register($_POST['username']);
-		$_SESSION['username'] = $_POST['username'];
-		header('location:../public/index.php?action=admin');	
-	}
-}
 
 function auth() {
-
 	session_start();
 	if (!isset($_SESSION['username'])) {
-		header('location:../public/index.php?action=connect');
+		header('location:../public/user.php?user=connect');
 	}
 }
 
@@ -52,28 +23,21 @@ function disconnect() {
 
 	session_start();
 	session_destroy();
-	header('location:../public/index.php?action=intro');
-
+	header('location:../public/user.php?user=intro');
 }
-
-	// &fctn verif sessO
-	// if id = valide / ouvrir sess
-	// if session en cours // SESSION STATUTS?
-	// Laisse passer
-	// Else form connexion
-
-	/*$isCorrect = password_verify($_POST['password'], $result['password']);
-
-	if (!$is_correct) {
-		echo "Nop";
-	} else {
-		if ($isCorrect) {
-			session_start();
-		}
-	}*/
 
 function admin() { // Affichage menu admin -- go to admin page
 	require("../view/admin/admin.php");
+}
+
+function create_admin() {
+	require("../view/admin/create_admin.php");
+}
+
+function add_min() {
+	$admin = new Admin($_POST['username'], password_hash($_POST['password'],PASSWORD_DEFAULT));
+	$adminmanager = new AdminManager();
+	$adminmanager->add($admin); 
 }
 
 function addpost() { // Ajouter un article -- function to create a post
@@ -126,33 +90,6 @@ function updatepost() { // Formulaire de modif -- form to update a post
 	}	
 }
 
-function author() { // Aller à la page auteur -- Go to author page
-	require("../view/user/author.php");
-}
-
-function chapters() { // Affichage de tous les articles en public -- shows all posts to users
-	$manager = new PostManager();
-	$posts = $manager->read();
-	require("../view/user/chapters.php");
-}
-
-function post() { // Affichage d'un article précis et de ses commentaires -- shows one post and its comments
-$manager = new PostManager();
-$post = $manager->readID($_GET['id']);
-$commentmanager = new CommentManager();
-$comments = $commentmanager->readComments($_GET['id']);
-require("../view/user/post.php");
-
-}
-
-function addcomment() { // Ecrire un commentaire -- function to create a comment
-	$comment = new Comment($_POST['pseudo'], $_POST['comment']);
-	$comment->setPostID($_POST['postID']);
-	$manager = new CommentManager();
-	$try = $manager->addComment($comment);
-	header('location:../public/index.php?action=chapters');
-}
-
 function readcomment() {
 	$commentmanager = new CommentManager();
 	$comment = $commentmanager->readcomment($_GET['id']);
@@ -160,11 +97,6 @@ function readcomment() {
 	echo $comment->getPseudo() . '</br>';
 	echo $comment->getComment();
 	var_dump($comment);
-}
-
-function report() {
-	$commentmanager = new CommentManager();
-	$comment = $commentmanager->report($_GET['id']);
 }
 
 function reported() {

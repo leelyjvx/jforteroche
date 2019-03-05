@@ -20,7 +20,7 @@
 			<img src="../public/pictures/User_Avatar_2.png">
 
 			<div class="row">
-				<form action="../public/index.php?action=valide" method="post">
+				<form action="../public/user.php?user=valide" method="post">
 					<div class="form-group ">
 
 						<p>
@@ -34,7 +34,7 @@
 						<div class="connect">
 							<div class="btn-group">
 								<input type="submit" name="connexion" class="btn btn-outline-light" value="Connexion">
-								<a href="../public/index.php?action=intro" class="btn btn-warning"> Accueil </a>
+								<a href="../public/user.php?user=intro" class="btn btn-warning"> Accueil </a>
 							</div>
 						</div>
 					</div>
@@ -43,6 +43,7 @@
 		</div>
 	</div>
 
+	<a href="../public/index.php?action=create_admin"> * </a>
 	<?php $content = ob_get_clean(); ?>
 	<?php require('../view/templates/admin/connect_template.php');?>
 

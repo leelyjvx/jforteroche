@@ -6,8 +6,8 @@
 	<p><em>Chapitre <?= $comment->getPostid(); ?> </em></p>
 	<p><strong> <?= $comment->getPseudo(); ?> </strong></p>
 	<p><?= $comment->getComment(); ?></p>
-	<p><a href="../public/index.php?action=deletecomment&id=<?=$comment->getID(); ?>"> Supprimer le commentaire? </a></p>
-	<p><a href="../public/index.php?action=validecomment&id=<?=$comment->getID(); ?>"> Ignorer </a></p>
+	<p><a href="../public/index.php?admin=deletecomment&id=<?=$comment->getID(); ?>"> Supprimer le commentaire? </a></p>
+	<p><a href="../public/index.php?admin=validecomment&id=<?=$comment->getID(); ?>"> Ignorer </a></p>
 
 <?php endforeach; ?>
 

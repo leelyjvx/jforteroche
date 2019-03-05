@@ -35,10 +35,10 @@
 					<header>
 						<div class="navbar navbar-expand-md justify-content-center align-content-center">
 							<div class="d-flex m-1 py-2">
-								<a class="nav-link" href="../public/index.php?action=admin"> Accueil </a>
-								<a class="nav-link" href="../public/index.php?action=createpost"> Créer un article </a>
-								<a class="nav-link" href="../public/index.php?action=readposts"> Lire les articles </a>
-								<a class="nav-link" href="../public/index.php?action=disconnect"> Déconnexion </a>
+								<a class="nav-link" href="../public/index.php?admin=admin"> Accueil </a>
+								<a class="nav-link" href="../public/index.php?admin=createpost"> Créer un article </a>
+								<a class="nav-link" href="../public/index.php?admin=readposts"> Lire les articles </a>
+								<a class="nav-link" href="../public/index.php?admin=disconnect"> Déconnexion </a>
 							</div>
 						</div>
 					</header>

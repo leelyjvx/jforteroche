@@ -18,16 +18,10 @@ class AdminManager extends Manager {
 		return $result; 
 	} 
 
+	public function add($admin) {
 
-	/*public function exists($info)
-	{
-		if (is_int($info)) {
-			return $this->db->query('SELECT username FROM admin WHERE id = '.$info)->fetchColumn();
-		} else {
-			$req = $this->db->prepare('SELECT username FROM admin WHERE username = :username');
-			$req->execute([':username' => $info]);
-
-			return $req->fetchColumn();
-		}
-	}*/
+		$req = $this->db->prepare('INSERT INTO admin (username, password) values (?, ?)');
+		$req->execute(array($admin->getUsername(), $admin->getPassword()));
+		return $req;
+	}
 }

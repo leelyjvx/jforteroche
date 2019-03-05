@@ -3,7 +3,7 @@
 <?php ob_start();?>
 
 
-<center><form action="../public/index.php?action=addpost" method="post" enctype="multipart/form-data">
+<center><form action="../public/index.php?admin=addpost" method="post">
 	<fieldset>
 		<p>
 			<p><label for="title" class="form-control-label"> Titre : </label></p>

@@ -7,8 +7,8 @@
 
 
 <div class="buttons">
-	<a href="../public/index.php?action=update&id=<?= $post->getID(); ?>" class="btn btn-success"  onclick="return confirm('Êtes-vous sûr de vouloir modifier cet article?')"> Modifier l'article </a>
-	<a href="../public/index.php?action=deletepost&id=<?= $post->getID(); ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article?')"> Supprimer l'article</a>
+	<a href="../public/index.php?admin=update&id=<?= $post->getID(); ?>" class="btn btn-success"  onclick="return confirm('Êtes-vous sûr de vouloir modifier cet article?')"> Modifier l'article </a>
+	<a href="../public/index.php?admin=deletepost&id=<?= $post->getID(); ?>" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article?')"> Supprimer l'article</a>
 </div>
 
 
