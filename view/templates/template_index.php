@@ -45,16 +45,16 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#"> Menu </a>
+						<a class="nav-link" href="index.php?action=intro"> Menu </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"> Chapitres </a>
+						<a class="nav-link" href="user.php?action=chapters"> Chapitres </a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#"> L'auteur </a>
+						<a class="nav-link" href="user.php?action=author"> L'auteur </a>
 					</li>
 					<li class="nav-item"> 
-						<a class="nav-link" href="#"> Contact </a>
+						<a class="nav-link" href="user.php?action=contact"> Contact </a>
 					</li>
 				</ul>
 			</div>
