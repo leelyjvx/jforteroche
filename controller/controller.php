@@ -120,3 +120,7 @@ function validecomment() {
 	$commentmanager = new CommentManager();
 	$commentmanager->validecomment($_GET['id']);
 }
+
+function intro() {
+	require('../view/intro.php');
+}

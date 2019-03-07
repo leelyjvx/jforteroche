@@ -9,8 +9,9 @@
 @media (min-width: 781px) and (max-width: 979px) {
 	body {float: none;}
 }
+
 body {
-	background-image: url('../pictures/back9.jpg');
+	background-image: url('pictures/back9.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
