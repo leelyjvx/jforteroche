@@ -1,21 +1,26 @@
 @media all and (max-width: 480px) {
-	body {float: none;}
+	body {
+		float: none;
+		background-color: black;
+	}
 }
 
 @media (min-width: 480px) and (max-width:780px) {
-	body {float: none;}
+	body {
+		float: none;
+		background-color: black;
+	}
 }
 
 @media (min-width: 781px) and (max-width: 979px) {
-	body {float: none;}
+	body {
+		float: none;
+		background-color: black;
+	}
 }
 
 body {
-	background-image: url('pictures/back9.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	color: #cdcdcd;
+	background-color: black;
 	min-width: 100%;
 	min-height: 100%;
 	margin: 0px;
@@ -52,6 +57,7 @@ p {
 
 .card {
 	background-color: white;
+	border: none;
 }
 
 .author {

@@ -1,7 +1,7 @@
 <?php $title = "L'auteur"; ?>
 <?php ob_start(); ?>
 
-<img src="../public/pictures/work-desk-computer-night-hacker-anonymous-office.jpg">
+<img src="pictures/work-desk-computer-night-hacker-anonymous-office.jpg">
 
 <h2> Jean Forteroche </h2>
 

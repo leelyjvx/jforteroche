@@ -6,7 +6,7 @@
 	<div class="col">
 		<div class="author"> 
 
-			<div class="col">
+			<div class="col-sm-6 col-lg-3">
 				<div class="author"> 
 
 					<div class="card">
@@ -23,6 +23,10 @@
 
 					</div>
 				</div>
+
+
+
+				
 			</div>
 
 			<?php $content = ob_get_clean();?>

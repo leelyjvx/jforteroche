@@ -9,7 +9,7 @@ require('../model/AdminManager.php');
 
 
 function intro() { // Affichage page intro -- go to intro's page
-	require("../view/intro.php");
+require("../view/intro.php");
 }
 
 function connect() { // Affichage page connexion -- go to connect page
@@ -46,11 +46,11 @@ function chapters() { // Affichage de tous les articles en public -- shows all p
 }
 
 function post() { // Affichage d'un article précis et de ses commentaires -- shows one post and its comments
-	$manager = new PostManager();
-	$post = $manager->readID($_GET['id']);
-	$commentmanager = new CommentManager();
-	$comments = $commentmanager->readComments($_GET['id']);
-	require("../view/user/post.php");
+$manager = new PostManager();
+$post = $manager->readID($_GET['id']);
+$commentmanager = new CommentManager();
+$comments = $commentmanager->readComments($_GET['id']);
+require("../view/user/post.php");
 }
 
 function addcomment() { // Ecrire un commentaire -- function to create a comment
@@ -64,5 +64,6 @@ function addcomment() { // Ecrire un commentaire -- function to create a comment
 function report() {
 	$commentmanager = new CommentManager();
 	$comment = $commentmanager->report($_GET['id']);
+	header('location:user.php?user=chapters');
 }
 
