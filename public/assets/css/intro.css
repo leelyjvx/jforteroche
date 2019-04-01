@@ -105,12 +105,12 @@ footer {
 	background-color: white;
 }
 
-img {
+.tiny img {
 	width: 100%;
 	height: auto;
 }
 
-img[Attribute Styles] {
+.tiny img.img-responsive {
 	width: 100%;
 	height: auto;
 }
