@@ -1,70 +1,57 @@
 <?php 
 
-include('../controller/controller.php');
+include('../controller/pcontroller.php');
 
+if (isset($_GET['page'])) {
 
-if (isset($_GET['admin'])) {
-
-	auth();
-	
-	if ($_GET['admin'] === 'readComment') { // Lire un commentaire
-		readComment();
+	if ($_GET['page'] === 'add_min') {
+		add_min();
 	}
 
-	if ($_GET['admin'] === 'reported') {
-		reported();
+	if ($_GET['page'] === 'create_admin') {
+		create_admin();
 	}
 
-	if ($_GET['admin'] === 'deletecomment') {
-		deletecomment();
+	if ($_GET['page'] === 'homepage') {
+		homepage();
 	}
 
-	if ($_GET['admin'] === 'validecomment') {
-		validecomment();
+	if ($_GET['page'] === 'author') {
+		author();
 	}
 
-	if ($_GET['admin'] === 'comments') {
-		comments();
+	if ($_GET['page'] === 'chapters') {
+		chapters();
+	}
+
+	if ($_GET['page'] === 'post') {
+		post();
+	}
+
+	if ($_GET['page'] === 'contact') {
+		contact();
 	}
 
 
-	if ($_GET['admin'] === 'disconnect') {
-		disconnect();
+	if ($_GET['page'] === 'intro') {
+		intro();
 	}
 
-	if ($_GET['admin'] === 'admin') { // Aller interface admin
-		admin();
+	if ($_GET['page'] === 'connect') {
+		connect();
 	}
-
-	if ($_GET['admin'] === 'createpost') {
-		createpost();
-	} 
-
-	if ($_GET['admin'] === 'addpost') { // Ajouter un post
-		addpost();
-	}
-
-	if ($_GET['admin'] === 'readposts') { // Afficher les posts
-		readposts();
-	}
-
-	if ($_GET['admin'] === 'deletepost') { // Suprimer un post
-		deletepost();
-	}
-
-	if ($_GET['admin'] === 'readpost') { // Lire un article unique
-		readpost();
-	}
-
-	if ($_GET['admin'] === 'updatepost') { // formulaire de MAJ d'un post
-	updatepost();
 }
 
-	if ($_GET['admin'] === 'update') { // Maj d'un post
-	update();
-}
+elseif (isset($_GET['comment'])) {
 
+	if ($_GET['comment'] === 'addcomment') {
+		addcomment();
+	}
 
+	if ($_GET['comment'] === 'report') {
+		$_GET['id'] === (int) $_GET['id'];
+		report();
+	}
 } else {
 	intro();
 }

@@ -1,7 +1,7 @@
 <?php $title = 'Admin';?>
 <?php ob_start(); ?>
 
-<form action="../public/index.php?action=add_min" method="post">
+<form action="index.php?page=add_min" method="post">
 	
 	<p><label for="username"> User : </label>
 		<input type="text" name="username" id="username"> </p>

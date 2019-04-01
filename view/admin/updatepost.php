@@ -1,9 +1,9 @@
-<?php $title = "Modifier l'article"; ?>
+ <?php $title = "Modifier l'article"; ?>
 
 <?php ob_start();?>
 
 
-<form action = "../public/index.php?admin=updatepost" method = "post">
+<form action = "index.php?admin=updatepost" method = "post">
 	<p><input type="hidden" name="id" value="<?= $post->getID();?>"></p>
 	<p> <input type="text" class="form-control-sm" name="title" value="<?=$post->getTitle();?>"> </p>
 	<p> <textarea name="content" cols="150" rows="22"> <?=$post->getContent(); ?> </textarea> </p>

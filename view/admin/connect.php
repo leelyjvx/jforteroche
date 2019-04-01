@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
 	<title> <?php $title = 'Connexion'; ?></title>
@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../public/css/admin/connect.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/admin/connect.css">
 </head>
 <body>
 
@@ -17,10 +17,10 @@
 			<h2> Bienvenue !</h2>
 			<h5> Merci de vous authentifier</h5>
 
-			<img src="../public/pictures/User_Avatar_2.png">
+			<img src="assets/pictures/User_Avatar_2.png">
 
 			<div class="row">
-				<form action="../public/user.php?user=valide" method="post">
+				<form action="admin.php?connect=valide" method="post">
 					<div class="form-group ">
 
 						<p>
@@ -34,7 +34,7 @@
 						<div class="connect">
 							<div class="btn-group">
 								<input type="submit" name="connexion" class="btn btn-outline-light" value="Connexion">
-								<a href="../public/user.php?user=intro" class="btn btn-warning"> Accueil </a>
+								<a href="index.php?page=intro" class="btn btn-warning"> Accueil </a>
 							</div>
 						</div>
 					</div>
@@ -43,7 +43,7 @@
 		</div>
 	</div>
 
-	<a href="../public/index.php?action=create_admin"> * </a>
+	<a href="index.php?page=create_admin"> * </a>
 	<?php $content = ob_get_clean(); ?>
 	<?php require('../view/templates/admin/connect_template.php');?>
 

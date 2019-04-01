@@ -11,36 +11,45 @@ require('../model/AdminManager.php');
 function auth() {
 	session_start();
 	if (!isset($_SESSION['username'])) {
-		header('location:../public/user.php?user=connect');
+		header('location:index.php?page=connect');
 	}
 }
 
-function is_connect() {
-	return isset($_SESSION['username']);
-}
-
 function disconnect() {
-
 	session_start();
 	session_destroy();
-	header('location:../public/user.php?user=intro');
+	header('location:index.php?page=intro');
 }
+
+function valide() {
+	
+	$hash = $admin->getPassword();
+	$admin = new Admin($_POST['username'], password_verify($_POST['password'], $hash));
+	$adminmngr = new AdminManager();
+	$session = $adminmngr->check($admin);
+
+	if ($session === false) {
+		header("location:index.php?page=author");
+		exit();
+
+	} else {
+		session_start();
+		//session_register($_POST['username']);
+		$_SESSION['username'] = $_POST['username'];
+		header("location:admin.php?page=admin");
+	}
+}
+
 
 function admin() { // Affichage menu admin -- go to admin page
 	require("../view/admin/admin.php");
 }
 
-function create_admin() {
+function create_admin() { // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	require("../view/admin/create_admin.php");
 }
 
-function add_min() {
-	$admin = new Admin($_POST['username'], password_hash($_POST['password'],PASSWORD_DEFAULT));
-	$adminmanager = new AdminManager();
-	$adminmanager->add($admin); 
-}
-
-function addpost() { // Ajouter un article -- function to create a post
+function addpost() { // Ajouter un article -- function to create a post -- 
 	$post = new Post(htmlspecialchars_decode($_POST['title']), htmlspecialchars_decode($_POST['content']));
 	$manager = new PostManager();
 	$manager->addpost($post);
@@ -67,7 +76,7 @@ function deletepost() { // Suppresion d'un article -- function to delete a post
 $manager = new PostManager();
 $manager->delete($_GET['id']);
 $title = "Article supprimé";
-$content = "<p> L'article a bien été supprimé! </p> </br> <a href='../public/index.php?action=readposts' class='btn btn-dark'> Retour à la liste </a>";
+$content = "<p> L'article a bien été supprimé! </p> </br> <a href='index.php?admin=readposts' class='btn btn-dark'> Retour à la liste </a>";
 require("../view/templates/admin/admin_template.php");
 }
 

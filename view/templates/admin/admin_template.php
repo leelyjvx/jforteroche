@@ -2,12 +2,20 @@
 <html>
 <head>
 	<title> <?= $title; ?> </title>
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-reboot.min.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/admin/admin_template.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/intro.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css" integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+	<link rel="icon" href="pictures/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/admin/admin_template.css">
 	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-	<script src="../wys/tinymce.min.js"></script>
+	<script src="assets/tinymce/tinymce.min.js"></script>
 	<script type="text/javascript">
 
 		tinymce.init({
@@ -24,6 +32,7 @@
 		});
 
 	</script>
+
 </head>
 <body>
 
@@ -35,10 +44,10 @@
 					<header>
 						<div class="navbar navbar-expand-md justify-content-center align-content-center">
 							<div class="d-flex m-1 py-2">
-								<a class="nav-link" href="../public/index.php?admin=admin"> Accueil </a>
-								<a class="nav-link" href="../public/index.php?admin=createpost"> Créer un article </a>
-								<a class="nav-link" href="../public/index.php?admin=readposts"> Lire les articles </a>
-								<a class="nav-link" href="../public/index.php?admin=disconnect"> Déconnexion </a>
+								<a class="nav-link" href="admin.php?page=admin"> Accueil </a>
+								<a class="nav-link" href="admin.php?post=createpost"> Créer un article </a>
+								<a class="nav-link" href="admin.php?post=readposts"> Lire les articles </a>
+								<a class="nav-link" href="admin.php?admin=disconnect"> Déconnexion </a>
 							</div>
 						</div>
 					</header>
@@ -47,7 +56,7 @@
 
 				<div class="box2">
 					<nav>
-						<div class="arrow"><a href="#"><img src="../public/pictures/arrow2.png" width="30"></a></div>
+						<div class="arrow"><a href="#"><img src="pictures/arrow2.png" width="30"></a></div>
 						<?= $content; ?>
 
 					</nav>
