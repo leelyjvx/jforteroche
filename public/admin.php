@@ -3,22 +3,28 @@
 require('../controller/controller.php');
 
 
-auth();
-
-if (isset($_GET['page'])) {
-	if ($_GET['page'] === 'admin') {
-		admin();
-	}
-}
-
-elseif (isset($_GET['connect'])) {
+if (isset($_GET['connect'])) {
 
 	if ($_GET['connect'] === 'valide') {
 		valide();
 	}
 }
 
+
+if (isset($_GET['page'])) {
+
+	auth();
+	
+	if ($_GET['page'] === 'admin') {
+		admin();
+	}
+}
+
+
 elseif (isset($_GET['comment'])) {
+
+
+	auth();
 
 	if ($_GET['comment'] === 'readComment') { // Lire un commentaire
 		readComment();
@@ -43,6 +49,9 @@ elseif (isset($_GET['comment'])) {
 }
 
 elseif ($_GET['post']) {
+
+
+	auth();
 
 	if ($_GET['post'] === 'createpost') {
 		createpost();
@@ -75,6 +84,10 @@ elseif ($_GET['post']) {
 }
 
 elseif ($_GET['admin']) {
+
+
+	auth();
+
 	if ($_GET['admin'] === 'disconnect') {
 		disconnect();
 	}

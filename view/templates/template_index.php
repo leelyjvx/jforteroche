@@ -52,7 +52,7 @@
 		</nav>
 		<!-- Footer -->
 
-		<footer class="nav navbar navbar-expand-md modal-footer navbar-light">
+		<footer class="nav navbar navbar-expand-md navbar-light">
 			<div class="m-0">
 				<a href="index.php?page=connect">°</a>
 			</div>

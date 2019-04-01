@@ -23,8 +23,7 @@ function disconnect() {
 
 function valide() {
 	
-	$hash = $admin->getPassword();
-	$admin = new Admin($_POST['username'], password_verify($_POST['password'], $hash));
+	$admin = new Admin($_POST['username'], $_POST['password']);
 	$adminmngr = new AdminManager();
 	$session = $adminmngr->check($admin);
 

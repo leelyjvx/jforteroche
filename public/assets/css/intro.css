@@ -105,9 +105,12 @@ footer {
 	background-color: white;
 }
 
-.shadow-textarea textarea.form-control::placeholder {
-	font-weight: 300;
+img {
+	width: 100%;
+	height: auto;
 }
-.shadow-textarea textarea.form-control {
-	padding-left: 0.8rem;
+
+img[Attribute Styles] {
+	width: 100%;
+	height: auto;
 }

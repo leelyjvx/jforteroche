@@ -9,7 +9,7 @@ class Admin
 	
 	public function __construct($username, $password) {
 		$this->_username = $username;
-		$this->_password = password_hash($password, PASSWORD_DEFAULT);
+		$this->_password = $password;
 	}
 
 	public function getID() {

@@ -1,51 +1,28 @@
-<!DOCTYPE html> 
-<html lang="fr">
-<head>
-	<title> <?php $title = 'Connexion'; ?></title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap-reboot.min.css">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/admin/connect.css">
-</head>
-<body>
+<?php $title = 'Connexion'; ?>
+<?php ob_start(); ?>
 
-	<?php ob_start(); ?>
-
-	<div class="container">
-		<div class="boite">
-			<h2> Bienvenue !</h2>
-			<h5> Merci de vous authentifier</h5>
-
-			<img src="assets/pictures/User_Avatar_2.png">
-
-			<div class="row">
-				<form action="admin.php?connect=valide" method="post">
-					<div class="form-group ">
-
-						<p>
-							<label for="username"> Identifiant : </label>
-							<input type="text" name="username" id="username" autofocus required>  
-						</p>
-						<p>
-							<label for="password"> Mot de passe : </label>
-							<input type="password" name="password" id="password" required>
-						</p>
-						<div class="connect">
-							<div class="btn-group">
-								<input type="submit" name="connexion" class="btn btn-outline-light" value="Connexion">
-								<a href="index.php?page=intro" class="btn btn-warning"> Accueil </a>
-							</div>
-						</div>
+<div class="container">
+	<div class="row">
+		<div class="card col-sm-6">
+			<div class="card-body">
+				<div class="card-title jumbotron">Espace restreint</div>
+				<div class="card-img-top"><img src="assets/pictures/User_Avatar_2.png" width="50" class="img-thumbnail"></div>
+				<div class="input-group">
+					<div class="form-control-plaintext">
+						<form action="admin.php?connect=valide" method="post">
+							<p><input type="text" name="username" id="user" placeholder="Identifiant" required autofocus></p>
+							<p><input type="password" name="password" id="password" placeholder="Mot de passe"></p>
+							<button class="btn btn-light">Connexion</button>
+						</form>
 					</div>
-				</form>
+				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
-	<a href="index.php?page=create_admin"> * </a>
-	<?php $content = ob_get_clean(); ?>
-	<?php require('../view/templates/admin/connect_template.php');?>
+<?php $content = ob_get_clean(); ?>
+<?php require('../view/templates/admin/connect_template.php');?>
 
 </body>
 </html>
