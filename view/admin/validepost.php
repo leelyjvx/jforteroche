@@ -6,8 +6,8 @@
 <h3> <?= $post->getTitle(); ?> </h3>
 <p> <?= $post->getContent(); ?> </p>
 
-<a class="btn btn-light" href="index.php?admin=admin"> Retour à l'accueil! </a>
-<a class="btn btn-dark" href="index.php?admin=readposts"> Voir les autres articles </a>
+<a class="btn btn-light" href="admin.php?page=admin"> Retour à l'accueil! </a>
+<a class="btn btn-dark" href="admin.php?post=readposts"> Voir les autres articles </a>
 
 <?php $content = ob_get_clean(); ?>
 <?php require("../view/templates/admin/admin_template.php"); ?>

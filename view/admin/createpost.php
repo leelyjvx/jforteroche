@@ -3,7 +3,7 @@
 <?php ob_start();?>
 
 
-<center><form action="index.php?admin=addpost" method="post">
+<center><form action="admin.php?post=addpost" method="post">
 	<fieldset>
 		<p>
 			<p><label for="title" class="form-control-label"> Titre : </label></p>
