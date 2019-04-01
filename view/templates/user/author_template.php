@@ -37,22 +37,11 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="index.php?page=intro">ACCUEIL <span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="index.php?page=chapters" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							CHAPITRES
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<!-- code php / boucle des chapitres-->
-							<a class="dropdown-item" href="index.php?page=chapters">Tous les chapitres </a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
-						</div>
 						<li class="nav-item">
-							<a class="nav-link" href="index.php?page=author">AUTEUR</a>
+							<a class="nav-link" href="index.php?page=chapters">CHAPITRES</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="index.php?page=contact">CONTACT</a>
+							<a class="nav-link" href="index.php?page=author">AUTEUR</a>
 						</li>
 					</li>
 				</ul>

@@ -100,3 +100,14 @@ footer {
 .posts a {
 	color: black;
 }
+
+.spost {
+	background-color: white;
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+	font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+	padding-left: 0.8rem;
+}

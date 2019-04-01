@@ -33,51 +33,40 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="index.php?page=intro">ACCUEIL <span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="index.php?page=chapters" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							CHAPITRES
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<!-- code php / boucle des chapitres-->
-							<a class="dropdown-item" href="index.php?page=chapters">Tous les chapitres</a>
-							<a class="dropdown-item" href="#">Another action</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Something else here</a>
-						</div>
-						<li class="nav-item">
-							<a class="nav-link" href="index.php?page=author">AUTEUR</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.php?page=contact">CONTACT</a>
-						</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?page=author">CHAPITRES</a>
 					</li>
-				</ul>
-				<span class="navbar-text">By Jean Forteroche</span>
-			</div>
-		</nav>
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?page=author">AUTEUR</a>
+					</li>
+				</li>
+			</ul>
+			<span class="navbar-text">By Jean Forteroche</span>
+		</div>
+	</nav>
 
-		<!-- Nav -->
-		<nav>
+	<!-- Nav -->
+	<nav>
 
-			<?= $content; ?>
-			
-		</nav>
-		<!-- Footer -->
+		<?= $content; ?>
 
-		<footer class="nav navbar navbar-expand-md modal-footer navbar-light">
-			<div class="m-0">
-				<a href="index.php?page=connect">°</a>
-			</div>
-			<div class="m-auto">
-				<a class="navbar-brand ml-1"><img src="assets/pictures/mini.png" height="30" width="30" alt="logo" class="d-inline-block align-start"></a>
-			</div>
-			<div class="btn-group-sm">
-				<a href="#"><i class="fab fa-facebook"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-google"></i></a>
-			</div>
-		</footer>
+	</nav>
+	<!-- Footer -->
 
-	</body>
-	</html>
+	<footer class="nav navbar navbar-expand-md modal-footer navbar-light">
+		<div class="m-0">
+			<a href="index.php?page=connect">°</a>
+		</div>
+		<div class="m-auto">
+			<a class="navbar-brand ml-1"><img src="assets/pictures/mini.png" height="30" width="30" alt="logo" class="d-inline-block align-start"></a>
+		</div>
+		<div class="btn-group-sm">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-google"></i></a>
+		</div>
+	</footer>
+
+</body>
+</html>
