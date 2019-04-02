@@ -9,7 +9,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="assets/css/intro.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/user/post.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -39,34 +39,34 @@
 					<li class="nav-item">
 						<a class="nav-link" href="index.php?page=author">AUTEUR</a>
 					</li>
-				</li>
-			</ul>
-			<span class="navbar-text">By Jean Forteroche</span>
-		</div>
-	</nav>
+				</ul>
+				<span class="navbar-text">By Jean Forteroche</span>
+			</div>
+		</nav>
 
-	<!-- Nav -->
-	<nav>
+		<!-- Nav -->
+		<main>
 
-		<?= $content; ?>
+			<?= $content; ?>
 
-	</nav>
-	<!-- Footer -->
+		</main>
+		<!-- Footer -->
 
-	<footer class="nav navbar navbar-expand-md modal-footer navbar-light">
-		<div class="m-0">
-			<a href="index.php?page=connect">°</a>
-		</div>
-		<div class="m-auto">
-			<a class="navbar-brand ml-1"><img src="assets/pictures/mini.png" height="30" width="30" alt="logo" class="d-inline-block align-start"></a>
-		</div>
-		<div class="btn-group-sm">
-			<a href="#"><i class="fab fa-facebook"></i></a>
-			<a href="#"><i class="fab fa-twitter"></i></a>
-			<a href="#"><i class="fab fa-instagram"></i></a>
-			<a href="#"><i class="fab fa-google"></i></a>
-		</div>
-	</footer>
+		<footer class="nav navbar navbar-expand-md modal-footer navbar-light">
+			<div class="m-0">
+				<a href="index.php?page=connect">°</a>
+			</div>
+			<div class="m-auto">
+				<a class="navbar-brand ml-1"><img src="assets/pictures/mini.png" height="30" width="30" alt="logo" class="d-inline-block align-start"></a>
+			</div>
+			<div class="btn-group-sm">
+				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+				<a href="#"><i class="fab fa-google"></i></a>
+			</div>
+		</footer>
+	</div>
 
 </body>
 </html>
