@@ -51,21 +51,23 @@
 
 		</main>
 		<!-- Footer -->
+		<div class="container">
+			<footer class="nav navbar navbar-expand-md modal-footer navbar-light">
+				<div class="m-0">
+					<a href="index.php?page=connect">°</a>
+				</div>
+				<div class="m-auto">
+					<a class="navbar-brand ml-1"><img src="assets/pictures/mini.png" height="30" width="30" alt="logo" class="d-inline-block align-start"></a>
+				</div>
+				<div class="btn-group-sm">
+					<a href="#"><i class="fab fa-facebook"></i></a>
+					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-google"></i></a>
+				</div>
 
-		<footer class="nav navbar navbar-expand-md modal-footer navbar-light">
-			<div class="m-0">
-				<a href="index.php?page=connect">°</a>
-			</div>
-			<div class="m-auto">
-				<a class="navbar-brand ml-1"><img src="assets/pictures/mini.png" height="30" width="30" alt="logo" class="d-inline-block align-start"></a>
-			</div>
-			<div class="btn-group-sm">
-				<a href="#"><i class="fab fa-facebook"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-google"></i></a>
-			</div>
-		</footer>
+			</footer>
+		</div>
 	</div>
 
 </body>

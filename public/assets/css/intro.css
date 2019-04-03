@@ -114,3 +114,23 @@ footer {
 	width: 100%;
 	height: auto;
 }
+
+.chapterstitle {
+	font-family: 'Tahoma';
+}
+
+.chapterstitle a {
+	text-decoration: none;
+	color: black;
+	text-decoration: unset;
+}
+
+.chapterstitle a:hover {
+	color: grey;
+}
+
+.card-title {
+	background-color: #f8f9fa;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
