@@ -25,7 +25,7 @@ body {
 	min-height: 100%;
 	margin: 0px;
 	padding: 0px;
-	position: relative;
+	position: absolute;
 }
 
 body, html {
@@ -82,10 +82,13 @@ header .overlay {
 	}
 }
 
-footer {
-	background-color: white;
-	position: absolute;
-	bottom: 0px;
+.footer {
+	position: relative;
+	bottom: 0;
+}
+
+.footer a {
+	color: black;
 }
 
 

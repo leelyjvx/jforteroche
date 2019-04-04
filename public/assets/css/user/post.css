@@ -39,3 +39,12 @@ body, html {
 .spost {
 	background-color: white;
 }
+
+.footer {
+	position: relative;
+	bottom: 0;
+}
+
+.footer a {
+	color: black;
+}

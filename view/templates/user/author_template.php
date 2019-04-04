@@ -37,40 +37,49 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="index.php?page=intro">ACCUEIL <span class="sr-only">(current)</span></a>
 					</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.php?page=chapters">CHAPITRES</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="index.php?page=author">AUTEUR</a>
-						</li>
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?page=chapters">CHAPITRES</a>
 					</li>
-				</ul>
-				<span class="navbar-text">By Jean Forteroche</span>
-			</div>
-		</nav>
+					<li class="nav-item">
+						<a class="nav-link" href="index.php?page=author">AUTEUR</a>
+					</li>
+				</li>
+			</ul>
+			<span class="navbar-text">By Jean Forteroche</span>
+		</div>
+	</nav>
 
-		<!-- Nav -->
-		<nav>
+	<!-- Nav -->
+	<nav>
 
-			<?= $content; ?>
-			
-		</nav>
-		<!-- Footer -->
+		<?= $content; ?>
+		
+	</nav>
+	<!-- Footer -->
 
-		<footer class="nav navbar navbar-expand-md modal-footer navbar-light">
+	
+	<div class="footer">
+		<div class="nav navbar navbar-expand-lg navbar-dark bg-warning">
+
 			<div class="m-0">
 				<a href="index.php?page=connect">°</a>
 			</div>
+
 			<div class="m-auto">
 				<a class="navbar-brand ml-1"><img src="assets/pictures/mini.png" height="30" width="30" alt="logo" class="d-inline-block align-start"></a>
 			</div>
+
 			<div class="btn-group-sm">
 				<a href="#"><i class="fab fa-facebook"></i></a>
 				<a href="#"><i class="fab fa-twitter"></i></a>
 				<a href="#"><i class="fab fa-instagram"></i></a>
 				<a href="#"><i class="fab fa-google"></i></a>
 			</div>
-		</footer>
 
-	</body>
-	</html>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

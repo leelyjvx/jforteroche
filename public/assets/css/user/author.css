@@ -82,3 +82,12 @@ body {
     color:#e91e63;
     transform:rotateY(360deg);
 }
+
+.footer {
+    position: relative;
+    bottom: 0;
+}
+
+.footer a {
+    color: black;
+}
