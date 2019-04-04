@@ -1,11 +1,12 @@
 
 body {
-	background-image: url('pictures/back9r.jpg');
+	background-color: black;
 	min-width: 100%;
 	min-height: 100%;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	position: absolute;
+	height: 100%;
 }
 
 body, html {
@@ -31,3 +32,13 @@ header {
 .footer a {
 	color: black;
 }
+
+.log {
+	background-image: url(../../pictures/back9r.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-bottom: 150px;
+	padding-top: 108px;
+}
+
