@@ -8,10 +8,10 @@
 				<div class="card align-content-center">
 					<div class="card-blockquote text-center"> Identification </div>
 					<div class="card-body">
-						<form action="#" method="post" class="form-group">
-							<p><input type="text" name="username" class="form-control-md pY-3" placeholder="Identifiant" required autofocus></p>
-							<p><input type="password" name="password" class="form-control-md pY-3" placeholder="Mot de passe " required></p>
-							<p><input type="submit" name="connect" class="btn btn-outline-warning" value="connexion"></p>
+						<form action="admin.php?connect=valide" method="post" class="form-group">
+							<p><input type="text" name="username" class="form-control-sm pY-3" placeholder="Identifiant" required autofocus></p>
+							<p><input type="password" name="password" class="form-control-sm pY-3" placeholder="Mot de passe " required></p>
+							<p><input type="submit" name="connect" class="btn btn-outline-warning" value="Connexion"></p>
 						</form>
 					</div>
 				</div>

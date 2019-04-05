@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
-	<title> <?= $title; ?> </title>
+
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title><?= $title; ?></title>
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/simple-sidebar.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"><meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/intro.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/admin/admin_template.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -40,40 +45,52 @@
 </head>
 <body>
 
-	<div class="background">
-		<div class="off_box">
-			<div class="container">
+	<div class="d-flex" id="wrapper">
 
-				<div class="box1">	
-					<header>
-						<div class="navbar navbar-expand-md justify-content-center align-content-center">
-							<div class="d-flex m-1 py-2">
-								<a class="nav-link" href="admin.php?page=admin"> Accueil </a>
-								<a class="nav-link" href="admin.php?post=createpost"> Créer un article </a>
-								<a class="nav-link" href="admin.php?post=readposts"> Lire les articles </a>
-								<a class="nav-link" href="admin.php?admin=disconnect"> Déconnexion </a>
-							</div>
-						</div>
-					</header>
-				</div>
-
-
-				<div class="box2">
-					<nav>
-						<div class="arrow"><a href="#"><img src="pictures/arrow2.png" width="30"></a></div>
-						<?= $content; ?>
-
-					</nav>
-				</div>
-
-				<div class="box3">
-					<footer>
-
-					</footer>
-				</div>
+		<!-- Sidebar -->
+		<div class="bg-light border-right" id="sidebar-wrapper">
+			<div class="sidebar-heading"> Billet simple pour l'Alaska </div>
+			<div class="list-group list-group-flush">
+				<a href="admin.php?post=createpost" class="list-group-item list-group-item-action bg-light"><i class="fas fa-pen"></i> Créer un article</a>
+				<a href="admin.php?post=readposts" class="list-group-item list-group-item-action bg-light"><i class="fas fa-glasses"></i> Lire/Editer les articles</a>
+				<a href="admin.php?comment=comments" class="list-group-item list-group-item-action bg-light"><i class="fas fa-comments"></i> Derniers commentaires</a>
+				<a href="admin.php?comment=reported" class="list-group-item list-group-item-action bg-light"><i class="fas fa-exclamation"></i> Commentaires signalés</a>
+				<a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-envelope"></i> Contact</a>
+				<a href="admin.php?admin=disconnect" class="list-group-item list-group-item-action bg-light"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
 			</div>
 		</div>
+		<!-- /#sidebar-wrapper -->
+
+		<!-- Page Content -->
+		<div id="page-content-wrapper">
+
+			<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+				<button class="btn btn-dark fix" id="menu-toggle">Administration</button>
+
+			</nav>
+
+			<div class="container-fluid">      
+
+				<?= $content; ?>
+
+			</div>
+		</div>
+		<!-- /#page-content-wrapper -->
+
 	</div>
+	<!-- /#wrapper -->
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
 
 </body>
+
 </html>

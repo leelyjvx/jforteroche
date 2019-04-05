@@ -1,132 +1,49 @@
-body {
-	background-image: url('../../pictures/back10.jpg');
-	height: 100%;
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+ body {
+  overflow-x: hidden;
 }
 
-body, html {
-	height: 100%;
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
 }
 
-.navbar {
-	background-color: rgba(44, 62, 80,0.8);
-	margin: auto;
-	padding: auto;
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
 }
 
-.navbar a {
-	color: white;
+#sidebar-wrapper .list-group {
+  width: 15rem;
 }
 
-.navbar a:hover {
-	color: black;
+#page-content-wrapper {
+  min-width: 100vw;
 }
 
-.box2 {
-	padding-top: 25px;
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
 }
 
-a {
-	text-decoration: none;
-	color: white;
-}
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
 
-a:hover {
-	text-decoration: none;
-	color: black;
-}
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
 
-.arrow {
-	position: fixed;
-	top: 95%;
-	right: 2%;
-}
-
-.buttons {
-	padding-top: 40px;
-	padding-bottom: 10px;
-}
-
-.title_post {
-	font-family: "Tangerine";
-	color: black;
-	text-align: center;	
-}
-
-.title_unique {
-	font-family: "Tangerine";
-}
-
-.content_post {
-	color: black;
-	text-align: center;
-	padding-top: 50px;
-}
-
-.content_unique {
-	padding-top: 70px;
-}
-
-.off_box {
-	margin-left: 180px;
-	margin-right: 180px;
-	padding-bottom: 50px;
-	background-color: rgba(236, 240, 241,0.5);
-}
-
-.block_admin {
-	padding-top: 260px;
-	padding-bottom: 269px;
-}
-
-.admin a {
-	color: white;
-	background-color: rgba(30, 39, 46,0.7);
-	border: rgba(30, 39, 46,1.0);
-}
-
-.admin a:hover {
-	color: #16a085;
-}
-
-.admin {
-	text-align: center;
-}
-
-.read_all {
-	background-color: rgba(210, 218, 226,0.8);
-	padding-bottom: 2px;
-}
-
-.separe {
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
-
-.one {
-	padding-top: 5px;
-}
-
-.one a {
-	color: black;
-	font-size: 40px;
-	margin-left: 50px;
-}
-
-.one a:hover {
-	font-size: 42px;
-}
-
-h3  {
-	font-size: 50px;
-	text-align: center;
-}
-
-h5 {
-	font-family: Arial;
-	font-size: 17px;
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
 }
