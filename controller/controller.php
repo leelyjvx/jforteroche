@@ -28,7 +28,7 @@ function valide() {
 	$session = $adminmngr->check($admin);
 
 	if ($session === false) {
-		header("location:index.php?page=author");
+		header("location:index.php?page=connect");
 		exit();
 
 	} else {
@@ -122,11 +122,13 @@ function comments() {
 function deletecomment() {
 	$commentmanager = new CommentManager();
 	$commentmanager->deletecomment($_GET['id']);
+	header('location:admin.php?comment=comments');
 }
 
 function validecomment() {
 	$commentmanager = new CommentManager();
 	$commentmanager->validecomment($_GET['id']);
+	header('location:admin.php?comment=comments');
 }
 
 function intro() {

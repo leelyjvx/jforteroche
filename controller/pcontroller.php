@@ -50,12 +50,12 @@ function addcomment() { // Ecrire un commentaire -- function to create a comment
 	$comment->setPostID($_POST['postID']);
 	$manager = new CommentManager();
 	$try = $manager->addComment($comment);
-	header('location:index.php?page=chapters');
+	header("location:".  $_SERVER['HTTP_REFERER']);
 }
 
 function report() {
 	$commentmanager = new CommentManager();
 	$comment = $commentmanager->report($_GET['id']);
-	header('location:index.php?page=chapters');
+	header("location:".  $_SERVER['HTTP_REFERER']);
 }
 
