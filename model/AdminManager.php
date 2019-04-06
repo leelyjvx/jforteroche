@@ -10,18 +10,25 @@ class AdminManager extends Manager {
 		$this->db = $this->dbConnect();
 	}
 
-	public function check($admin) {
-
-		$req = $this->db->prepare('SELECT username, password FROM admin WHERE username = ? AND password = ?');
-		$req->execute(array($admin->getUsername(), $admin->getPassword()));
-		$result = $req->fetch(PDO::FETCH_ASSOC);
-		return $result; 
-	} 
 
 	public function add($admin) {
 
-		$req = $this->db->prepare('INSERT INTO admin (username, password) values (?, ?)');
-		$req->execute(array($admin->getUsername(), $admin->getPassword()));
+		$hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+		$req = $this->db->prepare('INSERT INTO admin(username, password) VALUES (:username, :password)');
+		$req->bindValue(':username', $admin->getUsername());
+		$req->bindValue(':password', $hash );
+		$req->execute();
 		return $req;
 	}
+
+	public function check($username, $password) {
+
+		$req = $this->db->prepare('SELECT username, password FROM admin WHERE username = :username');
+		$req->execute(array('username' => $username ));
+		$data = $req->fetch();
+		$verif = password_verify($password, $data['password']);
+		return $verif;
+	}
+
 }
