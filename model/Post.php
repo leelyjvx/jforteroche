@@ -1,5 +1,12 @@
 <?php
 
+/**
+* Post Class 
+* 
+*
+* @author Lena>
+*/
+
 class Post {
 
 	protected $_id;

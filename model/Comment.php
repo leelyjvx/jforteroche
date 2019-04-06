@@ -1,5 +1,12 @@
 <?php
 
+/**
+* Comment Class 
+* 
+*
+* @author Lena>
+*/
+
 class Comment {
 
 	protected $_id;

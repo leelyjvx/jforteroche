@@ -1,5 +1,12 @@
 <?php 
 
+/**
+* Admin's router
+*
+*
+* @author Lena>
+*/
+
 require('../controller/controller.php');
 
 
@@ -26,7 +33,7 @@ elseif (isset($_GET['comment'])) {
 
 	auth();
 
-	if ($_GET['comment'] === 'readComment') { // Lire un commentaire
+	if ($_GET['comment'] === 'readComment') { 
 		readComment();
 	}
 

@@ -47,3 +47,23 @@
     margin-left: -15rem;
   }
 }
+
+.read_all img {
+  width: 100%;
+  height: auto;
+}
+
+.read_all img.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.content_unique img {
+  width: 100%;
+  height: auto;
+}
+
+.content_unique img-responsive {
+  width: 100%;
+  height: auto;
+}

@@ -1,5 +1,12 @@
 <?php
 
+/**
+* Manager
+* DataBase Connexion
+*
+* @author Lena>
+*/
+
 class Manager {
 
 	public function dbConnect() {

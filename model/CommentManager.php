@@ -1,6 +1,13 @@
 <?php 
 
-//require('Manager.php');
+/**
+* Class CommentManager 
+* 
+* Allows user to post, read and report comments
+* Allows admin to read, delete and read/ignore reported comments
+* @author Lena>
+*
+*/
 
 class CommentManager extends Manager {
 

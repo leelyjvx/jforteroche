@@ -12,6 +12,7 @@
 							<p><input type="text" name="username" class="form-control-sm pY-3" placeholder="Identifiant" required autofocus></p>
 							<p><input type="password" name="password" class="form-control-sm pY-3" placeholder="Mot de passe " required></p>
 							<p><input type="submit" name="connect" class="btn btn-outline-warning" value="Connexion"></p>
+							<p><a href="index.php?page=create_admin">*</a></p>
 						</form>
 					</div>
 				</div>

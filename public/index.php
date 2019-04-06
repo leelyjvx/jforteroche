@@ -1,5 +1,12 @@
 <?php 
 
+/**
+* Public router
+* 
+*
+* @author Lena>
+*/
+
 include('../controller/pcontroller.php');
 
 if (isset($_GET['page'])) {

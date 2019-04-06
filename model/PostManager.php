@@ -1,5 +1,12 @@
 <?php
 
+/**
+* PostManager Class 
+* Allows user to read posts
+* Allows admin to cread, read, update or delete posts
+* @author Lena>
+*/
+
 require('Manager.php');
 
 class PostManager extends Manager {

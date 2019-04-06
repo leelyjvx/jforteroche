@@ -1,6 +1,13 @@
 <?php
 
-//require('Manager.php');
+/**
+* Admin ClassManager
+* Allows user to create an account
+* Allows user to connect
+*
+* @author Lena>
+*/
+
 
 class AdminManager extends Manager {
 
@@ -25,7 +32,7 @@ class AdminManager extends Manager {
 	public function check($username, $password) {
 
 		$req = $this->db->prepare('SELECT username, password FROM admin WHERE username = :username');
-		$req->execute(array('username' => $username ));
+		$req->execute(array(':username' => $username ));
 		$data = $req->fetch();
 		$verif = password_verify($password, $data['password']);
 		return $verif;

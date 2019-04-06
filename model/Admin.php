@@ -1,5 +1,12 @@
 <?php
 
+/**
+* Admin Class 
+* 
+*
+* @author Lena>
+*/
+
 class Admin 
 
 {
