@@ -75,7 +75,7 @@ function deletepost() { // Suppresion d'un article -- function to delete a post
 $manager = new PostManager();
 $manager->delete($_GET['id']);
 $title = "Article supprimé";
-$content = "<p> L'article a bien été supprimé! </p> </br> <a href='index.php?admin=readposts' class='btn btn-dark'> Retour à la liste </a>";
+$content = "<p> L'article a bien été supprimé! </p> </br> <a href='admin.php?post=readposts' class='btn btn-dark'> Retour à la liste </a>";
 require("../view/templates/admin/admin_template.php");
 }
 
