@@ -14,7 +14,8 @@ function intro() {
 
 
 function add_min() {
-	$admin = new Admin($_POST['username'], password_hash($_POST['password'],PASSWORD_DEFAULT));
+
+	$admin = new Admin($_POST['username'], password_hash($_POST['password'], PASSWORD_DEFAULT));
 	$adminmanager = new AdminManager();
 	$adminmanager->add($admin);
 }
