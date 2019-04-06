@@ -22,16 +22,17 @@ function disconnect() {
 }
 
 function valide() {
-	
-	$admin = new Admin($_POST['username'], $_POST['password']);
-	$adminmngr = new AdminManager();
-	$session = $adminmngr->check($admin);
 
-	if ($session === false) {
+	$login = htmlspecialchars($_POST['username']);
+	$pass = htmlspecialchars($_POST['password']);
+	$adminmanager = new AdminManager();
+	$verif = $adminmanager->check($username, $pass);
+
+	if (!$verif) {
 		header("location:index.php?page=connect");
 		exit();
-
-	} else {
+	}
+	else {
 		session_start();
 		//session_register($_POST['username']);
 		$_SESSION['username'] = $_POST['username'];
