@@ -20,6 +20,7 @@
 	<link rel="icon" href="assets/fav/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="assets/css/admin/admin_template.css">
 	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Merriweather|Montserrat|Playfair+Display|Roboto+Condensed" rel="stylesheet">
 	<script src="assets/tinymce/tinymce.min.js"></script>
 	<script type="text/javascript">
 
@@ -48,15 +49,15 @@
 	<div class="d-flex" id="wrapper">
 
 		<!-- Sidebar -->
-		<div class="bg-light border-right" id="sidebar-wrapper">
-			<div class="sidebar-heading"> Billet simple pour l'Alaska </div>
+		<div class="bg-warning" id="sidebar-wrapper">
+			<div class="sidebar-heading"><a href="admin.php?page=admin">Billet simple pour l'Alaska</a>  </div>
 			<div class="list-group list-group-flush">
-				<a href="admin.php?post=createpost" class="list-group-item list-group-item-action bg-light"><i class="fas fa-pen"></i> Créer un article</a>
-				<a href="admin.php?post=readposts" class="list-group-item list-group-item-action bg-light"><i class="fas fa-glasses"></i> Lire/Editer les articles</a>
-				<a href="admin.php?comment=comments" class="list-group-item list-group-item-action bg-light"><i class="fas fa-comments"></i> Derniers commentaires</a>
-				<a href="admin.php?comment=reported" class="list-group-item list-group-item-action bg-light"><i class="fas fa-exclamation"></i> Commentaires signalés</a>
-				<a href="#" class="list-group-item list-group-item-action bg-light"><i class="fas fa-envelope"></i> Contact</a>
-				<a href="admin.php?admin=disconnect" class="list-group-item list-group-item-action bg-light"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+				<a href="admin.php?post=createpost" class="list-group-item list-group-item-action bg-warning"><i class="fas fa-pen"></i> Créer un article</a>
+				<a href="admin.php?post=readposts" class="list-group-item list-group-item-action bg-warning"><i class="fas fa-glasses"></i> Lire/Editer les articles</a>
+				<a href="admin.php?comment=comments" class="list-group-item list-group-item-action bg-warning"><i class="fas fa-comments"></i> Derniers commentaires</a>
+				<a href="admin.php?comment=reported" class="list-group-item list-group-item-action bg-warning"><i class="fas fa-exclamation"></i> Commentaires signalés</a>
+				<a href="#" class="list-group-item list-group-item-action bg-warning"><i class="fas fa-envelope"></i> Contact</a>
+				<a href="admin.php?admin=disconnect" class="list-group-item list-group-item-action bg-warning"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
 			</div>
 		</div>
 		<!-- /#sidebar-wrapper -->
@@ -64,8 +65,8 @@
 		<!-- Page Content -->
 		<div id="page-content-wrapper">
 
-			<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-				<button class="btn btn-dark fix" id="menu-toggle">Administration</button>
+			<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+				<button class="btn btn-light fix" id="menu-toggle">Administration</button>
 
 			</nav>
 

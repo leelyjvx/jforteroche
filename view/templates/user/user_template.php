@@ -58,7 +58,7 @@
 		<div class="nav navbar navbar-expand-lg navbar-dark bg-warning">
 
 			<div class="m-0">
-				<a href="index.php?page=connect">°</a>
+				<a href="index.php?page=connect"><i class="fas fa-id-badge"></i></a>
 			</div>
 
 			<div class="m-auto">

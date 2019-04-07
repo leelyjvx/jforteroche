@@ -38,7 +38,6 @@ function valide() {
 	$verif = $adminmanager->check($username, $password);
 
 	if (!$verif) {
-		var_dump($verif);
 		header("location:index.php?page=connect");
 		exit();
 	}
@@ -76,25 +75,25 @@ function readposts() {
 
 // Allows admin to read a post by its ID
 function readpost() {
-$manager = new PostManager();
-$post = $manager->readID($_GET['id']);
-require("../view/admin/uniquepost.php");
+	$manager = new PostManager();
+	$post = $manager->readID($_GET['id']);
+	require("../view/admin/uniquepost.php");
 }
 
 // Allows admin to delete a post
 function deletepost() { 
-$manager = new PostManager();
-$manager->delete($_GET['id']);
-$title = "Article supprimé";
-$content = "<p> L'article a bien été supprimé! </p> </br> <a href='admin.php?post=readposts' class='btn btn-dark'> Retour à la liste </a>";
-require("../view/templates/admin/admin_template.php");
+	$manager = new PostManager();
+	$manager->delete($_GET['id']);
+	$title = "Article supprimé";
+	$content = "<p> L'article a bien été supprimé! </p> </br> <a href='admin.php?post=readposts' class='btn btn-dark'> Retour à la liste </a>";
+	require("../view/templates/admin/admin_template.php");
 }
 
 // Update posts page
 function update() { 
-$manager = new PostManager();
-$post = $manager->readID($_GET['id']);
-require("../view/admin/updatepost.php");
+	$manager = new PostManager();
+	$post = $manager->readID($_GET['id']);
+	require("../view/admin/updatepost.php");
 }
 
 // Update posts form

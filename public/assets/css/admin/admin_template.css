@@ -3,7 +3,24 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
  */
- body {
+
+
+ @media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -27,43 +44,77 @@
 
 #page-content-wrapper {
   min-width: 100vw;
+  background-color: teal;
 }
 
 #wrapper.toggled #sidebar-wrapper {
   margin-left: 0;
 }
 
-@media (min-width: 768px) {
-  #sidebar-wrapper {
-    margin-left: 0;
-  }
+.sidebar-heading a {
+  color: white;
+  text-decoration: line-through;
+  font-family: 'Anton';
+}
 
-  #page-content-wrapper {
-    min-width: 0;
-    width: 100%;
-  }
-
-  #wrapper.toggled #sidebar-wrapper {
-    margin-left: -15rem;
-  }
+.list-group a {
+  color: black;
 }
 
 .read_all img {
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
 .read_all img.img-responsive {
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
 .content_unique img {
-  width: 100%;
+  width: 50%;
   height: auto;
 }
 
+.title_unique {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-family: 'Anton';
+}
+
+.content_unique {
+  font-family: 'Arial';
+  padding-bottom: 50px;
+}
+
 .content_unique img-responsive {
-  width: 100%;
+  width: 50%;
   height: auto;
+}
+
+.buttons {
+  padding-bottom: 50px;
+}
+
+.chapterid {
+  color: white;
+  font-family: 'Anton';
+}
+
+.pseudo, .comment {
+  color: white;
+}
+
+.session {
+  font-family: 'Anton';
+}
+
+.welcome {
+
+}
+
+.title_post a {
+  color: white;
+  font-family: 'Anton';
+  text-decoration: underline;
 }

@@ -4,10 +4,10 @@
 
 <?php foreach ($comments as $comment) : ?>
 
-	<em>Chapitre <?= $comment->getPostID();?></em>
-	<h5><strong><?= $comment->getPseudo(); ?></strong></h5>
-	<p><?= $comment->getComment(); ?></p>
-	<p><a class="btn btn-danger" href="admin.php?comment=deletecomment&id=<?= $comment->getID(); ?>"> Supprimer le commentaire? </a></p>
+	<div class="chapterid"> <em>Chapitre <?= $comment->getPostID();?></em></div>
+	<div class="pseudo"> <h5><strong><?= $comment->getPseudo(); ?></strong></h5></div>
+	<div class="comment"> <p><?= $comment->getComment(); ?></p></div>
+	<p><a class="btn btn-sm btn-danger" href="admin.php?comment=deletecomment&id=<?= $comment->getID(); ?>"> Supprimer le commentaire? </a></p>
 
 <?php endforeach; ?>	
 

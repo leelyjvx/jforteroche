@@ -25,6 +25,20 @@ function connect() {
 	require("../view/admin/connect.php");
 }
 
+function create_admin() {
+	require('../view/admin/create_admin.php');
+}
+
+
+// Creates account
+function add_min() {
+	$admin = new Admin($_POST['username'], $_POST['password']);
+	$adminmanager = new AdminManager();
+	$adminmanager->add($admin);
+	require ('../view/admin/connect.php');
+}
+
+
 // Author's description page
 function author() { 
 	require("../view/user/author.php");
